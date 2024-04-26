@@ -1,8 +1,17 @@
 import pickle
 import streamlit as st
 import numpy as np
+import joblib
+import requests
 
-model = pickle.load((open("C:/Users/Yash/Desktop/ExcelR Project/P375/App/model.pickle", 'rb')))
+model_url = "https://github.com/SpidY21/Medical_Cost_Prediction/blob/master/model.pickle"
+response = requests.get(model_url)
+with open("model.pkl", "wb") as f:
+    f.write(response.content)
+
+model = joblib.load("model.pkl")
+
+# model = pickle.load((open("C:/Users/Yash/Desktop/ExcelR Project/P375/App/model.pickle", 'rb')))
 
 
 def predictor(input_data):
