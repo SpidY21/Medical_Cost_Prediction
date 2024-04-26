@@ -1,8 +1,8 @@
 import pickle
 import streamlit as st
 import numpy as np
-import joblib
-import requests
+# import joblib
+# import requests
 
 # model_url = "https://github.com/SpidY21/Medical_Cost_Prediction/blob/master/model.pickle"
 # response = requests.get(model_url)
