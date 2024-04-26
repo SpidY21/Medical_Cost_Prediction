@@ -4,12 +4,14 @@ import numpy as np
 import joblib
 import requests
 
-model_url = "https://github.com/SpidY21/Medical_Cost_Prediction/blob/master/model.pickle"
-response = requests.get(model_url)
-with open("model.pkl", "wb") as f:
-    f.write(response.content)
+# model_url = "https://github.com/SpidY21/Medical_Cost_Prediction/blob/master/model.pickle"
+# response = requests.get(model_url)
+# with open("model.pkl", "wb") as f:
+#     f.write(response.content)
+#
+# model = joblib.load("model.pkl")
 
-model = joblib.load("model.pkl")
+model = pickle.load((open("https://github.com/SpidY21/Medical_Cost_Prediction/blob/master/model.pickle", 'rb')))
 
 # model = pickle.load((open("C:/Users/Yash/Desktop/ExcelR Project/P375/App/model.pickle", 'rb')))
 
