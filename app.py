@@ -13,7 +13,7 @@ import numpy as np
 
 # model = pickle.load((open("https://github.com/SpidY21/Medical_Cost_Prediction/blob/master/model.pickle", 'rb')))
 
-model = pickle.load((open("C:/Users/Yash/Desktop/ExcelR Project/P375/App/model.pickle", 'rb')))
+model = pickle.load((open("model.pickle", 'rb')))
 
 
 def predictor(input_data):
