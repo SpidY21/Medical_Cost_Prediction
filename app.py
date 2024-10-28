@@ -2,6 +2,7 @@ import pickle
 import streamlit as st
 import numpy as np
 from lightgbm import LGBMRegressor
+import lightgbm
 # import joblib
 # import requests
 
